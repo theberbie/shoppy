@@ -1,0 +1,51 @@
+<div class="items">
+
+<h1> Current Shopping List </h1>
+
+  <%= simple_form_for @item do |i| %>
+  <%= i.input :thing %>
+  <%= i.input :amount %>
+  <br />
+  <%= i.submit 'Add!', class:"btn btn-primary"%>
+  <%end%>
+
+  </div>
+
+  <button class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#myModal"> Add items!</button>
+  <br />
+</div>
+<br />
+<br />
+
+<div class="clear"> </div>
+
+  <!-- Modal -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      
+      </div>
+      <div class="modal-body">
+       <%= simple_form_for @item do |i| %>
+
+        <div class="modal-body">
+          <%= i.input :thing %>
+          <%= i.input :amount %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= i.submit "Add!", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+ 
+
+
+

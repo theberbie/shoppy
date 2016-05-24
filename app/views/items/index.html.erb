@@ -1,0 +1,9 @@
+<h1> Here's what we need this week! </h1>
+
+ <% @items.each do |i| %>
+ <hr> 
+<p> <strong> Thing: <%= i.thing %> </strong> </p>
+<p> <strong> Amount: <%= i.amount %> </strong> </p>
+
+<%end%>
+<%=link_to 'Add more stuff', new_item_path %>
